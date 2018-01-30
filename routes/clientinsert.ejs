@@ -1,0 +1,95 @@
+<html>  <head>
+
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstr ap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstr ap-theme.min.css">
+    <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!-- Loading the AngularJS file -->
+    <script src="Angularjs/signup.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap .min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script></head>
+<body  ng-app="signup" ng-controller="signup">
+<p style="text-align:center"></p>
+<img src="images/strip.png" style="position: absolute;align:center;left: 0px;top: 0px;z-index: -1;" alt="nav-bar" height="50px" width="100%">
+
+<div class="text-box">
+    <!-- <div class="field-input">-->
+    <div class="signup-wrapper">
+        <h1>You can help us grow more!!</h1>
+        <form name="insertClient">
+        <input type="text" class="textbox-control" name="ssn" id="ssn" placeholder="SSN"    placeholder="###-##-####" ng-model="ssn" ng-maxlength=9 ng-minlength=9 maxlength=9 ng-pattern="/[0-9]/"
+               required />
+            <span>
+                <span style="color:maroon" ng-show="insertClient.ssn.$error.maxlength || insertClient.ssn.$error.minlength"> SSN must be 9 digit long</span>
+            <span style="color:maroon" ng-show="insertClient.ssn.$error.required && insertClient.ssn.$dirty">SSN is required</span>
+            <span style="color:maroon" ng-show="insertClient.ssn.$error.pattern">SSN must contain numbers only</span>
+            </span></br></br>
+        <input type="text" class="textbox-control" name="city" id="email" placeholder="City" required ng-model="city"></br></br>
+        <input type="password" class="textbox-control"name="password" id="inputPassword" placeholder="Disease" required ng-model="disease"></br></br>
+        <div class="signup-wrapper">
+
+
+            <input type="submit" style="color:white" class="submit-button" value="Submit" style="position:relative;left:0px;" data-target="newSignUpCustomerModal" data-toggle="modal" ng-click="submit();"></br></br>
+            <a style="color:#1da1f2" href="/travel">Do you have any travel plan?</a>
+        </div>
+        </form>
+    </div>
+</div>
+v>
+
+<!-- After Signup Modal -->
+<div class="modal fade" id="newSignUpCustomerModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+
+            </div>
+            <div class="modal-body">
+                <center>
+                    <p><h3>Thanks for providing information.</h3></p>
+                    <p><h4>We are listening,and your response will help us to serve people better.</h4></p>
+                </center>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" data-dismiss="modal" class="btn btn-primary btn-primary-theme">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+

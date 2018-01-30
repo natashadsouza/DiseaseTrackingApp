@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="angularjs/rocket.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+<body>
+<div class = "container-fluid">
+<div ng-app="myApp" ng-controller="myCtrl"> 
+<div class = "row">
+<div class= "col-md-6" id="menu">
+<label>white pasta: 100</label>
+<input type = "checkbox" ng-model= "username"><br>
+
+<label> red pasta: 200</label>
+<input type = "checkbox" ng-model= "pas"><br>
+<label> red pasta: 200</label>
+<input type = "checkbox" ng-model= "dhiraj"><br>
+<label> pizza: 200</label>
+<input type = "checkbox" ng-model= "aditya"><br>
+<label> samose: 200</label>
+<input type = "checkbox" ng-model= "saurab"><br>
+
+
+<input type = "button" class="btn btn-success" ng-click="submit();" value="order">
+</div>
+<div class = "col-md-6" background color : red>
+<h1>{{item}}<br>
+{{item1}}<br>
+{{item2}}<br>
+{{item3}}<br>
+{{item4}}<br>
+{{myWelcome}}</h1>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

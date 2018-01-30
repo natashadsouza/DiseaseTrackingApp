@@ -1,0 +1,263 @@
+<html>  <head>
+
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstr ap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstr ap-theme.min.css">
+    <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"
+            type="text/javascript"></script>
+
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <!-- Loading the AngularJS file -->
+    <script src="Angularjs/search.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap .min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script></head>
+<body  ng-app="search" ng-controller="San_Jose">
+
+
+<br>
+<br>
+<br>
+
+
+    <br>
+    <br>
+    <br>
+
+
+<p style="text-align:center"></p>
+<img src="images/strip.png" style="position: absolute;align:center;left: 0px;top: 0px;z-index: -1;" alt="nav-bar" height="50px" width="100%">
+
+<div class="text-box">
+    <!-- <div class="field-input">-->
+
+    <div ng-hide="info">
+        <div class="signup-wrapper">
+            <h1>Search City</h1>
+            <form name="insertClient">
+
+
+                <input type="text" class="textbox-control" name="city" id="email" placeholder="City" required ng-model="city"></br></br>
+                <div class="signup-wrapper">
+
+
+                    <input type="submit" style="color:white" class="submit-button" value="Submit" style="position:relative;left:0px;" data-target="newSignUpCustomerModal" data-toggle="modal" ng-click="submit();"></br></br>
+                    <a style="color:#1da1f2" href="/tra vel">Help us serve better?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div ng-hide="mp">
+
+        <!-- add farmer notifications -->
+        <span class="admin-page-title">Results :</span><span class="admin-page-title-cat"></span>
+        <div ng-hide ="pre1">
+            <div class="thumbnail">
+                <div class="row row-margin-none">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Disease <span class="pull-right">:</span></h5>
+                            </div>
+                            <div class="col-md-6">
+                                <span>{{result1.disease}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Count <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>{{count1}}</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Precautions <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>There is no vaccine available or direct cure against dengue.
+	  Keep all drains free from choke.<br>
+          Cover all containers that hold water to prevent mosquito from accessing the water.<br>
+          Clear household garbage everyday by disposing into the refuse bins which are covered properly.<br>
+</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div ng-hide ="pre2">
+
+            <div class="thumbnail" >
+                <div class="row row-margin-none">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Disease <span class="pull-right">:</span></h5>
+                            </div>
+                            <div class="col-md-6">
+                                <span>{{result2.disease}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Count <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>{{count2}}</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Precautions <span class="pull-right">:</span></h5>
+                            </div>
+                            <span> Stay in well-screened areas at night<br>
+Always use a bed-net impregnated with insecticides<br>
+Use mosquito repellent
+.<br>
+</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div ng-hide ="pre3">
+
+            <div class="thumbnail" >
+                <div class="row row-margin-none">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Disease <span class="pull-right">:</span></h5>
+                            </div>
+                            <div class="col-md-6">
+                                <span>{{result3.disease}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Count <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>{{count3}}</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Precautions <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>Avoid contact/ itching the affected area<br>
+Carry cold creams or moisturizers<br>
+Keep yourself hydrated<br>
+</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div ng-hide ="pre4">
+
+            <div class="thumbnail">
+                <div class="row row-margin-none">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Disease <span class="pull-right">:</span></h5>
+                            </div>
+                            <div class="col-md-6">
+                                <span>{{result4.disease}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Count <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>{{count4}}</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Precautions <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>BCG vaccine - is a must<br>
+Take a throat swab when the trip is coming to an end to verify whether you have contracted the disease or not<br>
+Keep your houses/ places ventilated and well aired.
+<br>
+</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div ng-hide ="pre5">
+
+            <div class="thumbnail">
+                <div class="row row-margin-none">
+                    <div class="col-md-10">
+
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Disease <span class="pull-right">:</span></h5>
+                            </div>
+                            <div class="col-md-6">
+                                <span>{{result5.disease}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Count <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>{{count5}}</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 approve-col-1">
+                                <h5>Precautions <span class="pull-right">:</span></h5>
+                            </div>
+                            <span>Do not rub your eyes, as this can transmit germs to your nasal passages via the tear ducts.<br>
+Get enough sleep and rest.<br>
+Reduce exposure by carrying a face mask
+.<br>
+</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- FINISHED add farmer notification -->
+
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+
+
